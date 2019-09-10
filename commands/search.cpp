@@ -1,21 +1,15 @@
 #include<filesystem>
 #include<iostream>
+#include<thread>
 
 
-class Search
-{
-private:
-public:
-    Search();
-    ~Search();
-};
+void search(std::filesystem::path &path){
 
-Search::Search()
-{
-}
+    auto it=std::filesystem::directory_iterator(path);
+    
+    // for(std::filesystem::directory_entry &file:it){
 
-Search::~Search()
-{
+    // }
 }
 
 
@@ -23,6 +17,7 @@ int main(int argc, char const *argv[])
 {
     if(argc<2)return 0;
     auto path=std::filesystem::current_path();
+
     for (auto &d:std::filesystem::recursive_directory_iterator(path))
     {
         if(d.is_directory())
