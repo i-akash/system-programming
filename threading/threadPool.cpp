@@ -140,7 +140,7 @@ int main(int argc, char const *argv[])
             return 2;
             });
 
-    std::cout<<f1.get()+f2.get()+f3.get()+f4.get()+f5.get()+f6.get()+f7.get()<<"\n";
+    std::cout<<f2.get()+f3.get()+f4.get()+f5.get()+f6.get()+f7.get()<<"\n";
 
     return 0;
 }
